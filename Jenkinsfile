@@ -16,7 +16,7 @@ pipeline {
     }
     stage('Build docker image') {
       steps {
-        container('dockercontainer') {
+        container('docker') {
            
           sh '''
           
