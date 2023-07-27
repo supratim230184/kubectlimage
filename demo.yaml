@@ -7,6 +7,9 @@ spec:
    - name: mavencontainer
      image: maven:3.5.4-jdk-8-slim
      command: ["sleep", "43200"]
+   -name: kubectl
+    image: bitnami/kubectl:latest
+    command: ["sleep", "43200"]
    - name: dockercontainer
      image: docker:20
      command: ["sleep", "43200"]
