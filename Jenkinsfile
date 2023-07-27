@@ -10,7 +10,7 @@ pipeline {
     stage('kubernetes deploy') {
       steps {
       container('kubectl') {  
-          sh "kubectl create deployment nginx --image=nginx"
+          sh "kubectl --version"
        }    
       }
     }
