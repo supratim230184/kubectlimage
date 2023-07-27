@@ -9,8 +9,8 @@ pipeline {
   stages {
     stage('kubernetes deploy') {
       steps {
-      container('kubectl') {  
-          sh "kubectl --version"
+      container('mavencontainer') {  
+          sh "mvn --version"
        }    
       }
     }
@@ -20,7 +20,7 @@ pipeline {
            
           sh '''
           
-       docker run --name kubectl bitnami/kubectl:latest
+       docker build -t supra/nginx:latest .
           
           '''
           
